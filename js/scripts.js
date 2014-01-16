@@ -6,14 +6,16 @@ $(document).ready(function() {
 
         $(this).hover(
             function() {
-                $(this).animate({backgroundColor: '#FFA476'}, 200);
-                $(this).children('span:first').animate({color: '#FFA476'}, 200);
+                $(this).stop().animate({backgroundColor: '#FFA476'}, 200);
+                $(this).children('span:first').stop().animate({color: '#FFA476'}, 200);
             },
             function() {
-                $(this).animate({backgroundColor: bgColor}, 200);
-                $(this).children('span:first').animate({color: bgColor}, 200);
+                $(this).stop().animate({backgroundColor: bgColor}, 200);
+                $(this).children('span:first').stop().animate({color: bgColor}, 200);
             }
         ); // end hover
     }); // end each
+
+    // 
 
 }); // end ready
