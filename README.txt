@@ -1,1 +1,3 @@
-E-Mail: cxl2467@rit.edu
+Portfolio Website built with HTML, CSS, JavaScript, JQuery
+
+01/16/2014
