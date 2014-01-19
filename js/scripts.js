@@ -1,6 +1,6 @@
 $(document).ready(function() {
-
-    $('div.content').css({'position': 'relative', 'top': $(window).height()});
+    $('div.content').css({'position': 'relative', 'top': $(window).height(), 'display': 'none'});
+    $('#contact').css('visibility', 'hidden');
 
     // navigation link effects
     $('div.nav-flag').each(function() {
@@ -20,8 +20,10 @@ $(document).ready(function() {
 
         // click effect
         $(this).click(function() {
-            $('.content').show();
-            $('.content').animate({top: '158px'}, 
+            $('#contact').attr('style', '');
+
+            $('.content').css('display', '');
+            $('.content').animate({top: '162px'}, 
                                   {duration: 1400, queue: false,
                                    complete: function() {
                                        $('.content').attr('style', '');  
@@ -29,6 +31,7 @@ $(document).ready(function() {
                                  ); // end content animate
 
             var bottomHeight = $(window).height() - 162;
+            $('#nav').css('margin-left', '0');
             $('#nav').animate({bottom: bottomHeight},
                               {duration: 1400, queue: false,
                               complete: function() {
@@ -36,7 +39,7 @@ $(document).ready(function() {
                               }}
                              ); // end nav animate
 
-
+            $('#banner').css('margin-left', '0');
             $('#banner').animate({height: '120px'}, 
                                  {duration: 1400, 
                                   queue: false, 
