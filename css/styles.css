@@ -53,7 +53,7 @@ div#nav {
     bottom: 15px;
     margin-left: -7px;
     left: 43%;
-    width: 40.36%;
+    width: 39.95%;
 }
 
 div#top-nav {
@@ -68,6 +68,11 @@ div.nav-flag {
     background-color: #FFFFFF;
     height: 1.2em;
     margin-bottom: 14px;
+    cursor: pointer;
+}
+
+a.nav-flag {
+    display: block;
 }
 
 span.nav-text {
@@ -80,9 +85,12 @@ span.nav-text {
     padding-right: 10px;
 }
 
-a.nav-link {
-    text-decoration: none;
-}
+/*div.flag {
+    width: 100%;
+    height: 20px;
+    background-color: #FFFFFF;
+    margin-bottom: 14px;
+}*/
 
 div.content {
 }
