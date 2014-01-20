@@ -7,6 +7,7 @@ body {
     background-color: #B0C9F4;
     font-family: 'Open Sans', 'Verdana', sans-serif;
     font-weight: 300;
+    margin-top: 0px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -48,8 +49,8 @@ div#banner {
 
 div#top-banner {
     position: relative;
-    display: inline-block;
-    top: -11px;
+    float: left;
+    top: 0;
     width: 273px;
     height: 120px;
     background-color: #FF8C5A;
@@ -66,10 +67,8 @@ div#nav {
 
 div#top-nav {
     position: relative;
-    left: 18.5px;
-    top: 6px;
-    display: inline-block;
-    width: 60.55%;
+    margin-left: 355.7px;
+    top: 13.5px;
 }
 
 div.nav-flag {
@@ -100,6 +99,8 @@ span.nav-text {
 }
 
 div.content {
+    display: block;
+    margin-top: 33px;
 }
 
 div.module {
