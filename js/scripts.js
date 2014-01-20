@@ -93,4 +93,13 @@ $(document).ready(function() {
 
     }); // end each
 
+    $(window).resize(function() {
+        if ($(window).width() < 970) {
+            $('.wrapper').addClass('resized');
+        }
+        else {
+            $('.wrapper').removeClass('resized');
+        }
+    }); // end resize
+
 }); // end ready
