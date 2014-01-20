@@ -36,7 +36,7 @@ a {
 }
 
 .resized {
-    width: 98%;
+    width: 95%;
 }
 
 div#about {
@@ -60,6 +60,10 @@ div#banner {
     box-sizing: border-box;
 }
 
+.banner-resized {
+
+}
+
 div#top-banner {
     position: relative;
     float: left;
@@ -70,7 +74,7 @@ div#top-banner {
     padding: 30px 30px 0 30px;
 }
 
-.banner-resized {
+.topbanner-resized {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -96,7 +100,7 @@ div#top-nav {
     top: 13.5px;
 }
 
-.nav-resized {
+.topnav-resized {
     margin-left: 0 !important;
 }
 
@@ -128,8 +132,8 @@ span.nav-text {
 }
 
 div.content {
-    display: block;
-    margin-top: 33px;
+    display: inline-block;
+    margin-top: 11px;
 }
 
 div.module {
