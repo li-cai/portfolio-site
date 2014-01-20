@@ -10,18 +10,16 @@ $(document).ready(function() {
             $('#projects-link, #resume-link').removeClass('active');
             $('#about-link').addClass('active');
 
-            $('#top-nav').css({'position': 'fixed', 
-                               'left': '43%', 
-                               'width': '40.36%', 
-                               'margin-top': '10px'});
+            // $('#top-nav').css({'position': 'fixed', 
+            //                    'left': '43%', 
+            //                    'width': '40.36%', 
+            //                    'margin-top': '10px'});
 
-            $('#top-nav').animate({top: $(window).height() - 173.5},
+            $('#top-nav').animate({top: $(window).height() - 163.5},
                                   {duration: 1400, queue: false, 
                                    complete: function() {
                                        $('#top-nav').attr('id', 'nav');
                                        $('#nav').removeAttr('style');
-                                       $('div.content').css({'position': 'relative', 
-                                                             'top': $(window).height()});
                                        $('#projects').addClass('hidden');
                                        $('#resume').addClass('hidden');
                                    }}
@@ -29,7 +27,7 @@ $(document).ready(function() {
 
             $('#about').show();
 
-            $('#top-banner').css('margin-top', '3px');
+            // $('#top-banner').css('margin-top', '3px');
             $('#top-banner').animate({height: $(window).height() - 30},
                                      {duration: 1400, queue: false,
                                       complete: function() {
@@ -37,6 +35,15 @@ $(document).ready(function() {
                                           $('#banner').removeAttr('style');
                                       }}
                                     ); // end top-banner animate
+
+            $('.content').animate({marginTop: $(window).height() - 120},
+                                  {duration: 1400, queue: false,
+                                   complete: function() {
+                                       $('.content').removeAttr('style');  
+                                       $('.content').css({'position': 'relative', 
+                                                             'top': $(window).height()}); 
+                                   }}
+                                 ); // end content animate
         }
     }); // end click
 
