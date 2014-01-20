@@ -27,6 +27,10 @@ a {
     margin: auto;
 }
 
+.resized {
+    width: 98%;
+}
+
 div#about {
     color: #FFFFFF;
 }
