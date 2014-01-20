@@ -1,31 +1,39 @@
 $(document).ready(function() {
     $('div.content').css({'position': 'relative', 'top': $(window).height()});
 
-    $('#projects').css('display', 'none');
-    $('#resume').css('display', 'none');
+    $('#projects').addClass('hidden');
+    $('#resume').addClass('hidden');
 
     $('#projects-link').click(function() {
-        $('#projects').attr('style', '');
-        $('#resume').css('display', 'none');
+        $('#projects-link').addClass('active');
+        $('#resume-link').removeClass('active');
+        $('#projects').removeClass('hidden');
+        $('#resume').addClass('hidden');
     });
 
     $('#resume-link').click(function() {
-        $('#resume').attr('style', '');
-        $('#projects').css('display', 'none');
+        $('#resume-link').addClass('active');
+        $('#projects-link').removeClass('active');
+        $('#resume').removeClass('hidden');
+        $('#projects').addClass('hidden');
     });
 
     // navigation link effects
     $('div.nav-flag').each(function() {
-        // hover effect
-        $(this).hover(
-            function() {
-                $(this).stop().animate({opacity: '0.65'}, 200);
-            },
-            function() {
-                $(this).stop().animate({opacity: '1.0'}, 200);
-                $(this).attr('style', '');
-            }
-        ); // end hover
+
+        // if ($(this).css('opacity') != 0.6) {
+        //     // hover effect
+        //     $(this).hover(
+        //         function() {
+        //             $(this).stop().animate({opacity: '0.60'}, 200);
+        //         },
+        //         function() {
+        //             $(this).stop().animate({opacity: '1.0'}, 200, function() {
+        //                 $(this).attr('style', '');
+        //             });
+        //         }
+        //     ); // end hover           
+        // }
 
         // click effect
         $(this).click(function() {
