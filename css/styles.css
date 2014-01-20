@@ -71,7 +71,7 @@ div.nav-flag {
     cursor: pointer;
 }
 
-div.nav-flag:hover {
+div.nav-flag:hover, a.icon:hover {
     opacity: 0.6;
     filter:alpha(opacity=60);
     transition: opacity 0.2s linear;   
@@ -124,24 +124,16 @@ p.subheading {
 }
 
 a.icon {
-    opacity: 0.6;
-    filter:alpha(opacity=60);
     margin-left: 5px;
-}
-
-a.icon:hover {
-    opacity: 1.0;
-    filter:alpha(opacity=100);
-    transition: opacity 0.2s linear;   
-    -webkit-transition: opacity 0.2s linear;
-    -moz-transition: opacity 0.2s linear;
-    -o-transition: opacity 0.2s linear;
-    -ms-transition: opacity 0.2s linear;
 }
 
 .active {
     opacity: 0.6;
     filter:alpha(opacity=60);
+}
+
+.active:hover {
+    cursor: default;
 }
 
 .hidden {
