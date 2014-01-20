@@ -57,6 +57,15 @@ div#top-banner {
     padding: 30px 30px 0 30px;
 }
 
+.banner-resized {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: none !important;
+    width: 100% !important;
+    height: 150px !important;
+}
+
 div#nav {
     position: fixed;
     bottom: 15px;
@@ -69,6 +78,10 @@ div#top-nav {
     position: relative;
     margin-left: 355.7px;
     top: 13.5px;
+}
+
+.nav-resized {
+    margin-left: 0 !important;
 }
 
 div.nav-flag {
@@ -121,6 +134,10 @@ div#contact {
 img.header {
     width: 100%;
     margin-top: 30px;
+}
+
+.header-resized {
+    width: 273px !important;
 }
 
 img.screenshot {
