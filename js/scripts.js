@@ -1,5 +1,6 @@
 $(document).ready(function() {
-    $('div.content').css({'position': 'relative', 'top': $(window).height()});
+    $('div.content').css({'position': 'relative', 
+                          'top': $(window).height()});
 
     $('#projects').addClass('hidden');
     $('#resume').addClass('hidden');
@@ -8,6 +9,34 @@ $(document).ready(function() {
         if ($('#top-banner').length > 0) {
             $('#projects-link, #resume-link').removeClass('active');
             $('#about-link').addClass('active');
+
+            $('#top-nav').css({'position': 'fixed', 
+                               'left': '43%', 
+                               'width': '40.36%', 
+                               'margin-top': '10px'});
+
+            $('#top-nav').animate({top: $(window).height() - 173.5},
+                                  {duration: 1400, queue: false, 
+                                   complete: function() {
+                                       $('#top-nav').attr('id', 'nav');
+                                       $('#nav').removeAttr('style');
+                                       $('div.content').css({'position': 'relative', 
+                                                             'top': $(window).height()});
+                                       $('#projects').addClass('hidden');
+                                       $('#resume').addClass('hidden');
+                                   }}
+                                 ); // end top-nav animate
+
+            $('#about').show();
+
+            $('#top-banner').css('margin-top', '3px');
+            $('#top-banner').animate({height: $(window).height() - 30},
+                                     {duration: 1400, queue: false,
+                                      complete: function() {
+                                          $('#top-banner').attr('id', 'banner');
+                                          $('#banner').removeAttr('style');
+                                      }}
+                                    ); // end top-banner animate
         }
     }); // end click
 
@@ -36,7 +65,8 @@ $(document).ready(function() {
                 $('.content').animate({top: '162px'}, 
                                       {duration: 1400, queue: false,
                                        complete: function() {
-                                           $('.content').attr('style', '');  
+                                           $('.content').attr('style', '');
+
                                        }}
                                      ); // end content animate
 
