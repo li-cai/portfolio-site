@@ -57,7 +57,13 @@ div#banner {
     box-sizing: border-box;
 }
 
+.about-resized {
+    height: auto !important;
+}
+
 .banner-resized {
+    float: none !important;
+    width: 100% !important;
     height: auto !important;
 }
 
@@ -98,7 +104,7 @@ div#top-nav {
     top: 13.5px;
 }
 
-.topnav-resized {
+.topnav-resized, .nav-resized {
     margin-left: 0 !important;
 }
 
