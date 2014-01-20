@@ -5,8 +5,8 @@ $(document).ready(function() {
     $('#nav').css('top', $(window).height() - 165);
     //$('#banner').css('height', $(window).height() - 60);
 
-    $('#projects').addClass('hidden');
-    $('#resume').addClass('hidden');
+    $('#projects, #resume').addClass('hidden');
+    $('#banner, #nav').addClass('offset');
 
     $('#about-link').click(function() {
         if ($('#top-banner').length > 0) {
@@ -24,8 +24,8 @@ $(document).ready(function() {
                                        $('#top-nav').attr('id', 'nav');
                                        $('#nav').removeAttr('style');
                                        $('#nav').css('top', $(window).height() - 165);
-                                       $('#projects').addClass('hidden');
-                                       $('#resume').addClass('hidden');
+                                       $('#projects, #resume').addClass('hidden');
+                                       $('#nav').addClass('offset');
                                    }}
                                  ); // end top-nav animate
 
@@ -37,6 +37,7 @@ $(document).ready(function() {
                                       complete: function() {
                                           $('#top-banner').attr('id', 'banner');
                                           $('#banner').removeAttr('style');
+                                          $('#banner').addClass('offset');
                                       }}
                                     ); // end top-banner animate
 
@@ -70,6 +71,7 @@ $(document).ready(function() {
 
         if ($(this).attr('id') != 'about-link' &&
             $('#banner').length > 0) {
+
             // click effect
             $(this).click(function() {
                 $('.content').css('display', '');
@@ -81,7 +83,13 @@ $(document).ready(function() {
                 //                      ); // end content animate
 
                 // var bottomHeight = $(window).height() - 162;
-                $('#nav').css('left', '0');
+
+                if ($(".banner-resized")[0]) {
+                    $('#banner').removeClass('banner-resized');
+                }                
+
+                $('#nav, #banner').removeClass('offset');
+
                 $('#nav').animate({top: '13.5px'},
                                   {duration: 1400, queue: false,
                                   complete: function() {
@@ -89,7 +97,7 @@ $(document).ready(function() {
                                   }}
                                  ); // end nav animate
 
-                $('#banner').css('left', '0');
+                // $('#banner').css('left', '0');
                 $('#banner').animate({height: '150px'}, 
                                      {duration: 1400, 
                                       queue: false, 
@@ -103,10 +111,10 @@ $(document).ready(function() {
 
     }); // end each
 
+    var windowHeight = $(window).height();
     resizeWindow();
 
     $(window).resize(function() {
-        var windowHeight = $(window).height();
         resizeWindow();
     }); // end resize
 
@@ -133,7 +141,10 @@ function resizeWindow() {
 
     $('#nav').css('top', $(window).height() - 165);
 
-    // if ($(window).height() < windowHeight) {
-
-    // }
+    if ($(window).height() < $('#about').height() + 160) {
+        $('#banner').addClass("banner-resized");
+    }
+    else {
+        $('#banner').removeClass("banner-resized");
+    }
 }
