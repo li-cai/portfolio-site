@@ -84,8 +84,8 @@ $(document).ready(function() {
 
                 // var bottomHeight = $(window).height() - 162;
 
-                if ($(".banner-resized")[0]) {
-                    $('#banner').removeClass('banner-resized');
+                if ($(".about-resized")[0]) {
+                    $('#banner').removeClass('about-resized');
                 }                
 
                 $('#nav, #banner').removeClass('offset');
@@ -142,10 +142,10 @@ function resizeWindow() {
     $('#nav').css('top', $(window).height() - 165);
 
     if ($(window).height() < $('#about').height() + 160) {
-        $('#banner').addClass("banner-resized");
+        $('#banner').addClass("about-resized");
     }
     else {
-        $('#banner').removeClass("banner-resized");
+        $('#banner').removeClass("about-resized");
     }
 
     if ($(window).height() < 566) {
