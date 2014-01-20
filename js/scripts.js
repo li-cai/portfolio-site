@@ -147,4 +147,18 @@ function resizeWindow() {
     else {
         $('#banner').removeClass("banner-resized");
     }
+
+    if ($(window).height() < 566) {
+        $('#banner, #nav').removeClass('offset');
+    }
+    else {
+        $('#banner, #nav').addClass('offset');
+    }
+
+    if ($(window).width() < 350) {
+        $('img.header').removeClass('header-resized');
+    }
+    else {
+        $('img.header').addClass('header-resized');
+    }
 }
