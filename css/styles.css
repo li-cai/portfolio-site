@@ -27,6 +27,10 @@ a {
     margin: auto;
 }
 
+div#about {
+    color: #FFFFFF;
+}
+
 div#banner {
     position: fixed;
     top: 0;
