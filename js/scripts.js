@@ -100,13 +100,31 @@ $(document).ready(function() {
 
     }); // end each
 
+    resizeWindow();
+
     $(window).resize(function() {
-        if ($(window).width() < 920) {
-            $('.wrapper').addClass('resized');
-        }
-        else {
-            $('.wrapper').removeClass('resized');
-        }
+        resizeWindow();
     }); // end resize
 
 }); // end ready
+
+function resizeWindow() {
+    if ($(window).width() < 920) {
+        $('.wrapper').addClass('resized');
+    }
+    else {
+        $('.wrapper').removeClass('resized');
+    }   
+
+    if ($(window).width() < 580) {
+        $('#top-banner').addClass('banner-resized');
+        $('#top-nav').addClass('nav-resized');
+        $('img.header').addClass('header-resized');
+    }
+    else {
+        $('#top-banner').removeClass('banner-resized');
+        $('#top-nav').removeClass('nav-resized');
+        $('img.header').removeClass('header-resized');
+    }
+ 
+}
