@@ -62,7 +62,7 @@ $(document).ready(function() {
             // click effect
             $(this).click(function() {
                 $('.content').css('display', '');
-                $('.content').animate({top: '162px'}, 
+                $('.content').animate({top: '136px'}, 
                                       {duration: 1400, queue: false,
                                        complete: function() {
                                            $('.content').attr('style', '');
@@ -94,7 +94,7 @@ $(document).ready(function() {
     }); // end each
 
     $(window).resize(function() {
-        if ($(window).width() < 970) {
+        if ($(window).width() < 920) {
             $('.wrapper').addClass('resized');
         }
         else {
