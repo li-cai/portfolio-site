@@ -44,11 +44,8 @@ div#about {
 }
 
 div#banner {
-/*    position: fixed;
-    top: 0;*/
-    /*margin-left: -8px;*/
     position: relative;
-    left: -7px;
+    /*left: -7px;*/
     float: left;
     width: 333px;
     height: 100%;
@@ -61,7 +58,7 @@ div#banner {
 }
 
 .banner-resized {
-
+    height: auto !important;
 }
 
 div#top-banner {
@@ -85,13 +82,14 @@ div#top-banner {
 
 div#nav {
     position: relative;
-    left: -7.5px;
-/*    top: 165px;*/
-    /*bottom: 15px;*/
-    /*bottom: 15px;*/
+    /*left: -7.5px;*/
     margin-left: 355.7px;
 /*    left: 43%;
     width: 39.95%;*/
+}
+
+.offset {
+    left: -7.25px;
 }
 
 div#top-nav {
