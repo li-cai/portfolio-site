@@ -12,7 +12,9 @@ body {
     font-family: 'Open Sans', 'Verdana', sans-serif;
     font-weight: 300;
     margin: 0px;
+    width: 100%;
     height: 100%;
+    overflow-y: scroll;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -54,7 +56,6 @@ div#about {
 
 div#banner {
     position: relative;
-    /*left: -7px;*/
     float: left;
     width: 333px;
     height: 100%;
@@ -97,14 +98,7 @@ div#top-banner {
 
 div#nav {
     position: relative;
-    /*left: -7.5px;*/
     margin-left: 355.7px;
-/*    left: 43%;
-    width: 39.95%;*/
-}
-
-.offset {
-    left: -8px;
 }
 
 div#top-nav {
@@ -155,6 +149,7 @@ span.nav-text {
 
 div.content {
     display: inline-block;
+    width: 100%;
     margin-top: 11px;
 }
 
@@ -166,10 +161,15 @@ div.module {
     margin-bottom: 20px;
 }
 
-#dev-tile, #design-tile {
+#tiles {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/*#dev-tile, #design-tile {
     display: inline-block;
     padding: 0px;
-}
+}*/
 
 #design-tile {
     float: right;
@@ -217,6 +217,18 @@ a.icon {
     cursor: default;
 }
 
+#resume, #projects, #res {
+    display: inline-block;
+}
+
 .hidden {
+    display: none !important;
+}
+
+/*#development {
     display: none;
 }
+
+#design {
+    display: none;
+}*/
