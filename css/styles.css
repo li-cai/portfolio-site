@@ -128,7 +128,7 @@ div.nav-flag:hover, a.icon:hover {
     -ms-transition: opacity 0.2s linear;
 }
 
-#dev-tile:hover, #design-tile:hover, #back-tile:hover {
+#dev-tile:hover, #design-tile:hover, .back-tile:hover {
     opacity: 0.6;
     filter:alpha(opacity=60);
     cursor: pointer;
@@ -201,7 +201,7 @@ img.header {
     width: 273px !important;
 }
 
-#projects, img.screenshot, #back-tile, #tiles {
+#projects, img.screenshot, .back-tile, #tiles {
     width: 100%;
 }
 
