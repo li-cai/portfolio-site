@@ -1,9 +1,9 @@
-$(document).ready(function() {
+$(function() {
 
     $('#nav').css('top', $(window).height() - 165);
 
-    $('.content, #projects, #resume').addClass('hidden');
-    // $('#banner, #nav').addClass('offset');
+    $('.content').css('display', 'none');
+    $('#projects, #resume, #development, #design').addClass('hidden');
 
     $('#about-link').click(function() {
 
@@ -32,7 +32,6 @@ $(document).ready(function() {
                                            $('#nav').removeAttr('style');
                                            $('#nav').css('top', $(window).height() - 165);
                                            $('.content, #projects, #resume').addClass('hidden');
-                                           // $('#nav').addClass('offset');
                                       }}
                                      ); // end top-nav animate
 
@@ -43,7 +42,6 @@ $(document).ready(function() {
                                          complete: function() {
                                              $('#top-banner').attr('id', 'banner');
                                              $('#banner').removeAttr('style');
-                                             // $('#banner').addClass('offset');
                                          }}
                                         ); // end top-banner animate                
             }
@@ -72,8 +70,7 @@ $(document).ready(function() {
 
             // click effect
             $(this).click(function() {
-                // $('#nav, #banner').removeClass('offset');
-
+                
                 if ($(".about-resized")[0]) {
                     $('#banner').removeClass('about-resized');
                 }
@@ -89,7 +86,7 @@ $(document).ready(function() {
                     resizeWindow();
                 }
                 else {
-                    $('.content').removeClass('hidden');
+                    $('.content').removeAttr('style');
 
                     $('#nav').animate({top: '13.5px'},
                                       {duration: 1400, queue: false,
@@ -109,6 +106,16 @@ $(document).ready(function() {
             }); // end click
         }
     }); // end each
+
+    $('#dev-tile').click(function() {
+        $('#tiles').slideUp({duration: 1500, queue: false});
+        $('#development').slideDown({duration: 1500, queue: false});
+    }); // end click
+
+    $('#design-tile').click(function() {
+        $('#tiles').slideUp({duration: 1500, queue: false});
+        $('#design').slideDown({duration: 1500, queue: false});
+    }); // end click
 
     resizeWindow();
 
@@ -155,13 +162,6 @@ function resizeWindow() {
     else {
         $('#banner').removeClass("about-resized");
     }
-
-    // if ($(window).height() < 566) {
-    //     $('#banner, #nav').removeClass('offset');
-    // }
-    // else {
-    //     $('#banner, #nav').addClass('offset');
-    // }
 
     if ($(window).width() < 350) {
         $('img.header').removeClass('header-resized');
