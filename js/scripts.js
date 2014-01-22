@@ -24,14 +24,14 @@ $(function() {
                 resizeWindow();
             }
             else {
-
                 $('#top-nav').animate({top: $(window).height() - 163.5},
                                       {duration: 1400, queue: false, 
                                        complete: function() {
                                            $('#top-nav').attr('id', 'nav');
                                            $('#nav').removeAttr('style');
                                            $('#nav').css('top', $(window).height() - 165);
-                                           $('.content, #projects, #resume').addClass('hidden');
+                                           $('#projects, #resume').addClass('hidden');
+                                           $('.content').css('display', 'none');
                                       }}
                                      ); // end top-nav animate
 
@@ -70,7 +70,7 @@ $(function() {
 
             // click effect
             $(this).click(function() {
-                
+
                 if ($(".about-resized")[0]) {
                     $('#banner').removeClass('about-resized');
                 }
@@ -116,6 +116,14 @@ $(function() {
         $('#tiles').slideUp({duration: 1500, queue: false});
         $('#design').slideDown({duration: 1500, queue: false});
     }); // end click
+
+    $('.back-tile').each(function() {
+        $(this).click(function() {
+            $('#tiles').slideDown({duration: 1500, queue: false});
+            $('#development').slideUp({duration: 1500, queue: false}); 
+            $('#design').slideUp({duration: 1500, queue: false});          
+        }); // end click
+    }); // end each
 
     resizeWindow();
 
