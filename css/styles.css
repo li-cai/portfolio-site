@@ -28,6 +28,10 @@ a {
     text-decoration: none;
 }
 
+strong {
+    font-weight: 400;
+}
+
 .wrapper {
     position: relative;
     width: 900px;
@@ -95,7 +99,7 @@ div#nav {
 }
 
 .offset {
-    left: -7.25px;
+    left: -8px;
 }
 
 div#top-nav {
@@ -148,6 +152,10 @@ div.module {
     margin-bottom: 20px;
 }
 
+div.res {
+    padding: 0;
+}
+
 div#contact {
     display: inline-block;
     width: 100%;
@@ -188,4 +196,8 @@ a.icon {
 
 .hidden {
     display: none;
+}
+
+.resume {
+
 }
