@@ -118,7 +118,7 @@ div.nav-flag {
     cursor: pointer;
 }
 
-div.nav-flag:hover, a.icon:hover, #dev-tile:hover, #design-tile:hover {
+div.nav-flag:hover, a.icon:hover {
     opacity: 0.6;
     filter:alpha(opacity=60);
     transition: opacity 0.2s linear;   
@@ -128,13 +128,15 @@ div.nav-flag:hover, a.icon:hover, #dev-tile:hover, #design-tile:hover {
     -ms-transition: opacity 0.2s linear;
 }
 
-#dev-tile:hover, #design-tile:hover {
+#dev-tile:hover, #design-tile:hover, #back-tile:hover {
+    opacity: 0.6;
+    filter:alpha(opacity=60);
     cursor: pointer;
-    transition: opacity 0.4s linear;   
-    -webkit-transition: opacity 0.4s linear;
-    -moz-transition: opacity 0.4s linear;
-    -o-transition: opacity 0.4s linear;
-    -ms-transition: opacity 0.4s linear;    
+    transition: opacity 0.3s linear;   
+    -webkit-transition: opacity 0.3s linear;
+    -moz-transition: opacity 0.3s linear;
+    -o-transition: opacity 0.3s linear;
+    -ms-transition: opacity 0.3s linear;    
 }
 
 span.nav-text {
@@ -147,6 +149,10 @@ span.nav-text {
     padding-right: 10px;
 }
 
+.hidden {
+    display: none;
+}
+
 div.content {
     display: inline-block;
     width: 100%;
@@ -157,26 +163,26 @@ div.module {
     color: #15294b;
     background-color: #FFFFFF;
     padding: 40px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 6px;
+    margin-bottom: 24px;
 }
 
-#tiles {
-    width: 100%;
+#projects, #tiles {
     margin-top: 10px;
 }
 
-/*#dev-tile, #design-tile {
-    display: inline-block;
-    padding: 0px;
-}*/
+#dev-tile {
+    width: 61.78%;
+}
 
 #design-tile {
     float: right;
+    width: 36.11%;
 }
 
 #res {
     padding: 0;
+    margin-top: 10px;
 }
 
 div#contact {
@@ -195,7 +201,7 @@ img.header {
     width: 273px !important;
 }
 
-img.screenshot {
+#projects, img.screenshot, #back-tile, #tiles {
     width: 100%;
 }
 
@@ -216,19 +222,3 @@ a.icon {
 .active:hover {
     cursor: default;
 }
-
-#resume, #projects, #res {
-    display: inline-block;
-}
-
-.hidden {
-    display: none !important;
-}
-
-/*#development {
-    display: none;
-}
-
-#design {
-    display: none;
-}*/
