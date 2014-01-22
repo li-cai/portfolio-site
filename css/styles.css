@@ -25,7 +25,12 @@ h1 {
 }
 
 a {
+    color: #FF8C5A;
     text-decoration: none;
+}
+
+a:hover {
+    color: #FFC197;
 }
 
 strong {
@@ -119,7 +124,7 @@ div.nav-flag {
     cursor: pointer;
 }
 
-div.nav-flag:hover, a.icon:hover {
+div.nav-flag:hover, a.icon:hover, #dev-tile:hover, #design-tile:hover {
     opacity: 0.6;
     filter:alpha(opacity=60);
     transition: opacity 0.2s linear;   
@@ -127,6 +132,15 @@ div.nav-flag:hover, a.icon:hover {
     -moz-transition: opacity 0.2s linear;
     -o-transition: opacity 0.2s linear;
     -ms-transition: opacity 0.2s linear;
+}
+
+#dev-tile:hover, #design-tile:hover {
+    cursor: pointer;
+    transition: opacity 0.4s linear;   
+    -webkit-transition: opacity 0.4s linear;
+    -moz-transition: opacity 0.4s linear;
+    -o-transition: opacity 0.4s linear;
+    -ms-transition: opacity 0.4s linear;    
 }
 
 span.nav-text {
@@ -152,7 +166,16 @@ div.module {
     margin-bottom: 20px;
 }
 
-div.res {
+#dev-tile, #design-tile {
+    display: inline-block;
+    padding: 0px;
+}
+
+#design-tile {
+    float: right;
+}
+
+#res {
     padding: 0;
 }
 
@@ -196,8 +219,4 @@ a.icon {
 
 .hidden {
     display: none;
-}
-
-.resume {
-
 }
