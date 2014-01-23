@@ -118,7 +118,7 @@ div.nav-flag {
     cursor: pointer;
 }
 
-div.nav-flag:hover, a.icon:hover {
+div.nav-flag:hover, a.icon:hover, a#download-link:hover {
     opacity: 0.6;
     filter:alpha(opacity=60);
     transition: opacity 0.2s linear;   
@@ -221,4 +221,9 @@ a.icon {
 
 .active:hover {
     cursor: default;
+}
+
+#download-link {
+    position: relative;
+    top: -15px;
 }
