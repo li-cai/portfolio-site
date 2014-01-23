@@ -8,7 +8,7 @@ function resizeWindow() {
         $('.wrapper').removeClass('resized');
     }   
 
-    if ($(window).width() < 430) {
+    if ($(window).width() < 580) {
         $('#top-banner').addClass('topbanner-resized');
         $('#top-nav').addClass('topnav-resized');
         $('img.header').addClass('header-resized');
@@ -117,10 +117,9 @@ function loadSplashPage() {
                                          $('#top-banner').attr('id', 'banner');
                                          $('#banner').removeAttr('style');
                                      }}
-                                    ); // end top-banner animate                
+                                    ); // end top-banner animate      
+            resizeWindow();          
         }
-
-        resizeWindow();
     }
 }
 
@@ -185,5 +184,9 @@ $(function() {
     $(window).resize(function() {
         resizeWindow();
     }); // end resize
+
+    $(window).scroll(function() {
+        resizeWindow();
+    })
 
 }); // end ready
