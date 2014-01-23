@@ -15,6 +15,7 @@ $(function() {
                 $('#top-nav').removeClass('topnav-resized');
                 $('#top-banner').removeClass('topbanner-resized');
 
+                $('.content').css('display', 'none');
                 $('#projects, #resume').addClass('hidden');
                 $('#about').show();
 
@@ -71,6 +72,8 @@ $(function() {
             // click effect
             $(this).click(function() {
 
+                $('.content').removeAttr('style');
+
                 if ($(".about-resized")[0]) {
                     $('#banner').removeClass('about-resized');
                 }
@@ -86,8 +89,6 @@ $(function() {
                     resizeWindow();
                 }
                 else {
-                    $('.content').removeAttr('style');
-
                     $('#nav').animate({top: '13.5px'},
                                       {duration: 1400, queue: false,
                                        complete: function() {
@@ -101,7 +102,8 @@ $(function() {
                                               $('#about').hide();
                                               $('#banner').attr({'id': 'top-banner', 'style': ''});
                                          }}
-                                        ); // end banner animate                    
+                                        ); // end banner animate     
+                    // resizeWindow();               
                 }             
             }); // end click
         }
