@@ -1,4 +1,4 @@
-function resizeWindow() {
+function resizeLayout() {
     $('#nav').css('top', $(window).height() - 165);
 
     if ($(window).width() < 940) {
@@ -59,7 +59,7 @@ function loadMainPage() {
         $('#nav').attr('id', 'top-nav');
         $('#banner').attr('id', 'top-banner');
 
-        resizeWindow();
+        resizeLayout();
     }
     else {
         var animateTime = 1100;
@@ -96,7 +96,7 @@ function loadSplashPage() {
             $('#top-nav').attr('id', 'nav');
             $('#top-banner').attr('id', 'banner');
 
-            resizeWindow();
+            resizeLayout();
         }
         else {
             var animateTime = 1100;
@@ -120,22 +120,22 @@ function loadSplashPage() {
                                          $('#banner').removeAttr('style');
                                      }}
                                     ); // end top-banner animate      
-            resizeWindow();          
+            resizeLayout();          
         }
     }
 }
 
 $(function() {
 
-    resizeWindow();
+    resizeLayout();
 
     $(window).resize(function() {
-        resizeWindow();
+        resizeLayout();
     }); // end resize
 
     if ($('#banner').length > 0) {
         $(window).scroll(function() {
-            resizeWindow();
+            resizeLayout();
         }); // end scroll
     }
 
