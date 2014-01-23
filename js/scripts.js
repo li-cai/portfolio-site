@@ -131,9 +131,11 @@ $(function() {
         resizeWindow();
     }); // end resize
 
-    $(window).scroll(function() {
-        resizeWindow();
-    })
+    if ($('#banner').length > 0) {
+        $(window).scroll(function() {
+            resizeWindow();
+        }); // end scroll
+    }
 
     $('#nav').css('top', $(window).height() - 165);
 
