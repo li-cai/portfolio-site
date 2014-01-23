@@ -227,3 +227,7 @@ a.icon {
     position: relative;
     top: -15px;
 }
+
+div#message {
+    font-size: 1.2em;
+}
