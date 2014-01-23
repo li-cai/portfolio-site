@@ -125,6 +125,16 @@ function loadSplashPage() {
 
 $(function() {
 
+    resizeWindow();
+
+    $(window).resize(function() {
+        resizeWindow();
+    }); // end resize
+
+    $(window).scroll(function() {
+        resizeWindow();
+    })
+
     $('#nav').css('top', $(window).height() - 165);
 
     $('.content').css('display', 'none');
@@ -178,15 +188,5 @@ $(function() {
             $('#design').stop().slideUp({duration: 1500, queue: false});          
         }); // end click
     }); // end each
-
-    resizeWindow();
-
-    $(window).resize(function() {
-        resizeWindow();
-    }); // end resize
-
-    $(window).scroll(function() {
-        resizeWindow();
-    })
 
 }); // end ready
