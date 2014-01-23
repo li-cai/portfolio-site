@@ -62,7 +62,7 @@ function loadMainPage() {
         resizeWindow();
     }
     else {
-        var animatetime = 1100;
+        var animateTime = 1100;
         $('#nav').animate({top: '13.5px'},
                           {duration: animateTime, queue: false,
                            complete: function() {
@@ -99,7 +99,7 @@ function loadSplashPage() {
             resizeWindow();
         }
         else {
-            var animatetime = 1100;
+            var animateTime = 1100;
             $('#top-nav').animate({top: $(window).height() - 163.5},
                                   {duration: animateTime, queue: false, 
                                    complete: function() {
