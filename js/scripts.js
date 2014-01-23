@@ -62,15 +62,16 @@ function loadMainPage() {
         resizeWindow();
     }
     else {
+        var animatetime = 1100;
         $('#nav').animate({top: '13.5px'},
-                          {duration: 1400, queue: false,
+                          {duration: animateTime, queue: false,
                            complete: function() {
                                $('#nav').attr({'id': 'top-nav', 'style': ''});
                           }}
                          ); // end nav animate
 
         $('#banner').animate({height: '150px'}, 
-                             {duration: 1400, queue: false, 
+                             {duration: animateTime, queue: false, 
                               complete: function () {
                                   $('#about').hide();
                                   $('#banner').attr({'id': 'top-banner', 'style': ''});
@@ -98,8 +99,9 @@ function loadSplashPage() {
             resizeWindow();
         }
         else {
+            var animatetime = 1100;
             $('#top-nav').animate({top: $(window).height() - 163.5},
-                                  {duration: 1400, queue: false, 
+                                  {duration: animateTime, queue: false, 
                                    complete: function() {
                                        $('#top-nav').attr('id', 'nav');
                                        $('#nav').removeAttr('style');
@@ -112,7 +114,7 @@ function loadSplashPage() {
             $('#about').show();
 
             $('#top-banner').animate({height: $(window).height() - 30},
-                                     {duration: 1400, queue: false,
+                                     {duration: animateTime, queue: false,
                                      complete: function() {
                                          $('#top-banner').attr('id', 'banner');
                                          $('#banner').removeAttr('style');
@@ -173,21 +175,22 @@ $(function() {
         }
     }); // end each
 
+    var slideTime = 1200;
     $('#dev-tile').click(function() {
-        $('#tiles').stop().slideUp({duration: 1500, queue: false});
-        $('#development').stop().slideDown({duration: 1500, queue: false});
+        $('#tiles').stop().slideUp({duration: slideTime, queue: false});
+        $('#development').stop().slideDown({duration: slideTime, queue: false});
     }); // end click
 
     $('#design-tile').click(function() {
-        $('#tiles').stop().slideUp({duration: 1500, queue: false});
-        $('#design').stop().slideDown({duration: 1500, queue: false});
+        $('#tiles').stop().slideUp({duration: slideTime, queue: false});
+        $('#design').stop().slideDown({duration: slideTime, queue: false});
     }); // end click
 
     $('.back-tile').each(function() {
         $(this).click(function() {
-            $('#tiles').stop().slideDown({duration: 1500, queue: false});
-            $('#development').stop().slideUp({duration: 1500, queue: false}); 
-            $('#design').stop().slideUp({duration: 1500, queue: false});          
+            $('#tiles').stop().slideDown({duration: slideTime, queue: false});
+            $('#development').stop().slideUp({duration: slideTime, queue: false}); 
+            $('#design').stop().slideUp({duration: slideTime, queue: false});          
         }); // end click
     }); // end each
 
