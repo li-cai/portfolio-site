@@ -136,6 +136,10 @@ function hideTiles(slideTime, selector) {
 }
 
 function resetTiles() {
+    if ($('#tiles').css('display') == 'none') {
+        $('#tiles').removeAttr('style');
+        $('#development, #design').css('display', 'none');
+    }
 }
 
 $(function() {
@@ -175,6 +179,12 @@ $(function() {
     $('#about-link').click(function() {
         loadSplashPage();
     }); // end click
+
+    $('#projects-link').click(function() {
+        if (!$('projects-link').hasClass('active')) {
+            resetTiles();
+        }
+    });
 
     // navigation link effects
     $('div.nav-flag').each(function() {
