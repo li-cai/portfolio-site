@@ -125,7 +125,21 @@ function loadSplashPage() {
     }
 }
 
+function showTiles(slideTime) {
+    $('#tiles').stop().slideDown({duration: slideTime, queue: false});
+    $('#development, #design').stop().slideUp({duration: slideTime, queue: false});   
+}
+
+function hideTiles(slideTime, selector) {
+    $('#tiles').stop().slideUp({duration: slideTime, queue: false});
+    selector.stop().slideDown({duration: slideTime, queue: false});    
+}
+
+function resetTiles() {
+}
+
 $(function() {
+    var slideTime = 1200;
 
     resizeLayout();
 
@@ -175,22 +189,17 @@ $(function() {
         }
     }); // end each
 
-    var slideTime = 1200;
     $('#dev-tile').click(function() {
-        $('#tiles').stop().slideUp({duration: slideTime, queue: false});
-        $('#development').stop().slideDown({duration: slideTime, queue: false});
+        hideTiles(slideTime, $('#development'))
     }); // end click
 
     $('#design-tile').click(function() {
-        $('#tiles').stop().slideUp({duration: slideTime, queue: false});
-        $('#design').stop().slideDown({duration: slideTime, queue: false});
+        hideTiles(slideTime, $('#design'))
     }); // end click
 
     $('.back-tile').each(function() {
         $(this).click(function() {
-            $('#tiles').stop().slideDown({duration: slideTime, queue: false});
-            $('#development').stop().slideUp({duration: slideTime, queue: false}); 
-            $('#design').stop().slideUp({duration: slideTime, queue: false});          
+            showTiles(slideTime);       
         }); // end click
     }); // end each
 
